@@ -18,11 +18,11 @@ def analyze(request):
             if char not in punctuations:
                 analyzed = analyzed + char
         param = {'purpose': 'removed punctuation', 'analyzed_text': analyzed}
-        return render(request, 'analyze.html', param)
+        return render(request, 'analyze2.html', param)
 
     elif uppercase == "on":
             param = {'purpose': 'Make Uppercase', 'analyzed_text':djtext.upper()}
-            return render(request, 'analyze.html', param)
+            return render(request, 'analyze2.html', param)
 
     elif space_remover == "on":
         analyzed= " "
@@ -31,7 +31,7 @@ def analyze(request):
                 analyzed= analyzed + char
 
         param = {'purpose': 'removed punctuation', 'analyzed_text': analyzed}
-        return render(request, 'analyze.html', param)
+        return render(request, 'analyze2.html', param)
 
 
 
