@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+    {% csrf_token %}
 <h1>your analyzed text-{{purpose}}</h1>
 <p>
     {{analyzed_text}}
